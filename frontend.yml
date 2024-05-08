@@ -1,5 +1,7 @@
 - name: frontend playbook
   hosts: all
+  become: true
+  # become_method: sudo # optional
   tasks:
     - name: Installing Nginx
       ansible.builtin.dnf:
